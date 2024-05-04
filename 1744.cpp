@@ -18,10 +18,8 @@ int main() {
     vector<bool> check(N, false);
     int minus = -1;
     if(num[N - 1] > 0) {
-        cout << "양수가 포함된 배열\n";
         for(int i = N - 1; i >= 1; i -= 2) {
             if(num[i] * num[i - 1] <= 0 || check[i] || check[i - 1]) {
-                cout << "?!!!!!! : " << i << endl;
                 if(num[i] > 0) {
                     answer += num[i];
                     check[i] = true;
@@ -43,7 +41,6 @@ int main() {
     else {
         minus = N - 1;
     }
-    cout << "음수 시작 point : " << minus << endl;
     if(minus >= 0) {
         for(int i = 0; i <= minus; i += 2) {
             if(i + 1 >= N)  break;
